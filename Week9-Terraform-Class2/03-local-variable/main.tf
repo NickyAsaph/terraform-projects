@@ -1,6 +1,6 @@
 variable "bucket_prefix" {
   type    = string
-  default = "cnl123bucketterraform"
+  default = "nick-test"
 }
 
 locals {
@@ -9,5 +9,5 @@ locals {
 
 resource "aws_s3_bucket" "my_test_bucket" {
   bucket = local.bucket_name
-  acl    = "public-read-write"
+  acl    = "private"
 }
